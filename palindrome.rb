@@ -14,7 +14,7 @@ def palindrome(word)
 
   # If first and last match then call again
   # If not, then break
-  if (first == last)
+  if (first.downcase == last.downcase)
     palindrome(word)
   else
     puts "It is not a palindrome"
@@ -27,4 +27,4 @@ puts "Enter a word: "
 word = gets.strip
 
 # Call palindrome function with user input
-palindrome(word.split(''))
+palindrome(word.split('').select { |el| el != ' ' })
