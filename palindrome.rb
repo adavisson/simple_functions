@@ -27,4 +27,6 @@ puts "Enter a word: "
 word = gets.strip
 
 # Call palindrome function with user input
-palindrome(word.split('').select { |el| el != ' ' })
+palindrome(word.split('').select do |el| 
+  el != ' '
+end)
