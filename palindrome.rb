@@ -9,13 +9,14 @@ def palindrome(word)
   end
 
   # Get the first and last letter of array
-  first = word.shift()
-  last = word.pop()
+  #first = word.shift()
+  #last = word.pop()
+  first, *rest, last = word
 
   # If first and last match then call again
   # If not, then break
   if (first.downcase == last.downcase)
-    palindrome(word)
+    palindrome(rest)
   else
     puts "It is not a palindrome"
     return
