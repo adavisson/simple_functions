@@ -9,5 +9,5 @@ def fib(n):
 print("Enter a number: ")
 number = input()
 
-result = fib(number)
+result = fib(int( number))
 print(result)
